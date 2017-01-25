@@ -1,0 +1,17 @@
+<h1>Listing instances</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @instances.each do |instance| %>
+    <tr>
+      <td><%= instance.title %></td>
+      <td><%= instance.text %></td>
+      <td><%= link_to 'Show', instance_path(instance) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Instance', new_instance_path %>
